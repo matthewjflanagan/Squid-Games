@@ -12,13 +12,8 @@
     width: 150px;
     height: auto;
     padding: 10px;
-    background-color: #217568;
-    border-radius: 10px;
-}
-
-.pics:hover {
     background-color: #FF006F;
-    transition: 5s;
+    border-radius: 10px;
 }
 
 body {
