@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@621&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pics {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    background-color: #217568;
+    border-radius: 10px;
+}
+
+.pics:hover {
+    background-color: #FF006F;
+    transition: 5s;
+}
+
+body {
+    background-color: #217568;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background: #FF006F;
+    padding: 2%;
+    width: 100%;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    margin: 1% auto;
+    border: 3px solid white;
+    width: 50%;
+    color: white;
+    font-size: 46px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2% 3%;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+}
+
+.badge {
+    background: #FF006F;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 0.5% 2%;
+}
+
+.user-label {
+    position: absolute;
+    top: 40%;
+    left: -10%;
+}
+
+.computer-label {
+    position: absolute;
+    top: 40%;
+    right: -10%;
+}
+
+.result {
+    font-size: 25px;
+    color: white;
+    background-color: #FF006F;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2% 0;
+}
+
+.choices:hover {
+    cursor: pointer;
+}
+
+.green-glow {
+    background-color: #0AFF00;
+    font-size: 25px;
+    color: white;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+}
+
+.red-glow {
+    background-color: #FF0000;
+    font-size: 25px;
+    color: white;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+}
+
+.grey-glow {
+    background-color: #D4D4D4;
+    font-size: 25px;
+    color: white;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+}
