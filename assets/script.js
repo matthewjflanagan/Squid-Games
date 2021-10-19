@@ -34,7 +34,7 @@ function win (userChoice, computerChoice) {
     setTimeout(function() { 
         document.querySelector('.result').classList.remove('green-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
-    }, 3000)
+    }, 1000)
 }
 
 // function for if user loses
@@ -46,7 +46,7 @@ function lose (userChoice, computerChoice) {
     setTimeout(function() { 
         document.querySelector('.result').classList.remove('red-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
-    }, 3000)
+    }, 1000)
 }
 
 // function for if user ties
@@ -56,7 +56,7 @@ function tie (userChoice, computerChoice) {
     setTimeout(function() { 
         document.querySelector('.result').classList.remove('grey-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
-    }, 3000)
+    }, 1000)
 }
 
 // define wins losses and ties 
