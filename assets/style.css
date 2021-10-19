@@ -7,6 +7,8 @@
 }
 
 .pics {
+    display: flex;
+    flex-wrap: wrap;
     width: 150px;
     height: auto;
     padding: 10px;
@@ -24,17 +26,21 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background: #FF006F;
     padding: 2%;
     width: 100%;
 }
 
 header h1 {
+    display: flex;
     color: white;
-    text-align: center;
     font-family: 'Orbitron', sans-serif;
 }
 
@@ -73,6 +79,8 @@ header h1 {
 }
 
 .result {
+    display: flex;
+    flex-wrap: wrap;
     font-size: 25px;
     color: white;
     background-color: #FF006F;
