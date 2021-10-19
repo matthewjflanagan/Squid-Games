@@ -11,7 +11,7 @@ Make it thorugh all 6 games to win the prize money!
 - [License](#license)
 
 ## Installation
-
+https://matthewjflanagan.github.io/Squid-Games/ 
 
 ## Usage
 
