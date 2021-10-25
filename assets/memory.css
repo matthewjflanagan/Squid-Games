@@ -52,7 +52,7 @@
     width: 80%;
     height: 60%;
     margin: auto;
-    border: white 2px solid;
+    perspective: (1000px);
 }
 
 .memory-card {
@@ -60,7 +60,9 @@
     height: calc(33% - 10px);
     margin: 5px;
     position: relative;
-    transform: scale(1)
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 /* click effect */
@@ -69,10 +71,19 @@
     transition: transform .2s;
 }
 
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
 .front-face, 
 .back-face {
     width: 100%;
     height: 100%;
     border: 5px solid #FF006F;
     position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
 }
