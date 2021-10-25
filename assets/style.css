@@ -17,7 +17,7 @@
     margin: 10% 0;
 }
 
-body {
+.rpsbody {
     background-color: #217568;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ body {
     flex-wrap: wrap;
 }
 
-header {
+.rpsheader {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -34,7 +34,7 @@ header {
     width: 100%;
 }
 
-header h1 {
+.rpsheader h1 {
     display: flex;
     color: white;
     font-family: 'Orbitron', sans-serif;

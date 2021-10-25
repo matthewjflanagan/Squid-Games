@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@621&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tttbody {
+    background-color: #217568;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.memoryheader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #FF006F;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    padding: 2%;
+}
+
+.rules {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 26px;
+    color: white;
+    background-color: #FF006F;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    width: 50%;
+    margin: 2% 0;
+    border-radius: 10px;
+}
+
+.tttimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.memory-game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    border: white 2px solid;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1)
+}
+
+/* click effect */
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-face, 
+.back-face {
+    width: 100%;
+    height: 100%;
+    border: 5px solid #FF006F;
+    position: absolute;
+}
