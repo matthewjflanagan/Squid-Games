@@ -84,6 +84,6 @@
     backface-visibility: hidden;
 }
 
-.front-face {
+.back-face {
     transform: rotateY(180deg);
 }
