@@ -1,4 +1,6 @@
 const cards = document.querySelectorAll('.memory-card');
+const lives_span = document.querySelector('.lives');
+let lives = 5;
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -31,10 +33,13 @@ function checkForMatch () {
         // do cards match?
         // console.log(firstCard.dataset.framework);
         // console.log(secondCard.dataset.framework);
-        let isMatch = firstCard.dataset.framework === 
-            secondCard.dataset.framework;
-
-        isMatch ? disableCards() : unflipCards(); 
+        if (isMatch = firstCard.dataset.framework === 
+            secondCard.dataset.framework) {
+                disableCards();
+            } else {
+                unflipCards();
+                loseLife();
+            }
 }
 
 function disableCards() {
@@ -52,6 +57,11 @@ function unflipCards() {
 
         resetBoard();
     }, 1500);
+}
+
+function loseLife() {
+    lives--;
+    lives_span.innerHTML = lives;
 }
 
 function resetBoard() {
