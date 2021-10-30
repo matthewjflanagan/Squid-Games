@@ -50,6 +50,8 @@
     flex-wrap: wrap;
     flex: 1 0 auto;
     width: 90%;
+    max-width: 420px;
+    max-height: 630px;
     perspective: (1000px);
 }
 
