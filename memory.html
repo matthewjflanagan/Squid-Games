@@ -11,13 +11,28 @@
     <header class="memoryheader">
         <h1>Memory</h1>
     </header>
-
-    <div class="rules">
+    <div class="memoryWinDiv Endresult hide">
+        <div class="memoryWinDiv hide">
+            <h1>Congratulations you have won! You may advance to Round 3</h1>
+        </div>
+        <div class="memoryWinDiv hide">
+            <a class="result memoryWinDiv hide" href="#" alt="link to memory game" style="font-size:30px">Under Construction...</a>
+        </div>
+    </div>
+    <div class="memoryLoseDive Endresult ">
+        <div class="memoryLoseDiv">
+            <h1>You have been elimated...would you like to start over?</h1>
+        </div>
+        <div class="memoryLoseDive">
+        <a class="result memoryLoseDive" href="index.html" alt="link to rps game" style="font-size:30px">Start Over</a>
+        </div>
+    </div>
+    <div class="rules hide">
         <p>Match all 6 pairs of cards...or you will be eliminated</p>
-        <span class="lives">5</span>
+        <span>Lives Left...</span><span class="lives">5</span>
     </div>
 
-    <section class="memory-game">
+    <section class="memory-game hide">
         <div class = "memory-card" data-framework="square">            
             <img class="back-face tttimg" src="assets/pics/squaremask.jpg" alt="backcardcoversquare"/>
             <img class="front-face tttimg" src="assets/pics/memorygamefrontcard.jpg" alt="frontcardcover"/>
