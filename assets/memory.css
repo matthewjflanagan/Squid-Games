@@ -40,6 +40,7 @@
     font-family: 'Orbitron', sans-serif;
     text-align: center;
     width: 50%;
+    min-width: 255px;
     margin: 2% 0;
     border-radius: 10px;
 }
@@ -94,7 +95,7 @@
 }
 
 .memoryWinDiv {
-    margin-top: 8%;
+    margin-top: 2%;
     justify-content: center;
     background: #FF006F;
     width: 80%;

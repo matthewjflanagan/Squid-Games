@@ -65,6 +65,7 @@ function loseLife() {
     if (lives <= 0) {
         // prompt that user lost and ask if they would like to restart the game
         $('.memory-game').addClass("hide");
+        $('.rules').addClass("hide");
         $(".memoryLoseDiv").removeClass("hide");
     }
 }
