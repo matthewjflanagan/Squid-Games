@@ -18,8 +18,8 @@
         <span class="user-score">0</span>:<span class="computer-score">0</span>
     </div>
 
-    <div class="result">
-        <p>Select Rock, Paper, or Scissors...loser will be eliminated</p>
+    <div class="result rpsEnd">
+        <p class="rpsEnd">Select Rock, Paper, or Scissors...loser will be eliminated</p>
     </div>
 
     <div class="choices">
@@ -32,9 +32,27 @@
         <div class="choice s">
             <img class="scissorspic pics" src="assets/pics/scissors.jfif" alt="scissors">
         </div>
+
+    <div class="rpsWinDiv Endresult hide">
+        <div class="rpsWinDiv hide">
+            <h1>Congratulations you have won! You may advance to Round 2</h1>
+        </div>
+        <div class="rpsWinDiv hide">
+            <a class="result rpsWinDiv hide" href="memory.html" alt="link to memory game" style="font-size:30px">Memory</a>
+        </div>
     </div>
-<div><a href="memory.html" alt="link to memory game">Memory Game</a><div>
+
+    <div class="rpsLoseDiv Endresult hide">
+        <div class="rpsLoseDiv hide">
+            <h1>You have been elimated...would you like to start over?</h1>
+        </div>
+        <div class="rpsLoseDiv hide">
+        <a class="result rpsLoseDiv hide" href="index.html" alt="link to rps game" style="font-size:30px">Start Over</a>
+        </div>
+    </div>
+    </div>
 
     <script src="assets/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

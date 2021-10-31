@@ -25,6 +25,11 @@
     flex-wrap: wrap;
 }
 
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
 .rpsheader {
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +40,6 @@
 }
 
 .rpsheader h1 {
-    display: flex;
     color: white;
     font-family: 'Orbitron', sans-serif;
 }
@@ -77,7 +81,20 @@
 .result {
     display: flex;
     flex-wrap: wrap;
-    font-size: 26px;
+    font-size: 20px;
+    color: white;
+    background-color: #FF006F;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+.Endresult {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
     color: white;
     background-color: #FF006F;
     width: fit-content;
@@ -126,4 +143,18 @@
     width: fit-content;
     padding: 1% 2%;
     border-radius: 10px;
+}
+
+.rpsWinDiv {
+    justify-content: center;
+    background: #FF006F;
+    width: 80%;
+    max-width: 550px;
+}
+
+.rpsLoseDiv {
+    justify-content: center;
+    background: #FF006F;
+    width: 80%;
+    max-width: 550px;
 }

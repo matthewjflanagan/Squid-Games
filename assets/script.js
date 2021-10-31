@@ -10,6 +10,9 @@ const result_div = document.querySelector('.result');
 const rock_div = document.querySelector('.r');
 const paper_div = document.querySelector('.p');
 const scissors_div = document.querySelector('.s');
+const choice_divs = document.querySelector('.choice');
+const lose_div = document.querySelector('.rpsLoseDiv');
+const win_div = document.querySelector('.rpsWinDiv');
 
 // generate random choice of r p or s
 function getComputerChoice() {
@@ -35,7 +38,28 @@ function win (userChoice, computerChoice) {
         document.querySelector('.result').classList.remove('green-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
     }, 1000)
+    if(userScore >= 10) {
+        // prompt that user won and to click link for next game 
+        $('.choice').addClass("hide");
+        $(".rpsWinDiv").removeClass("hide");
+    }
 }
+
+// function winGame() {
+//     if(userScore >= 10) {
+//         // prompt that user won and to click link for next game 
+//         choice_divs.classList.add('hide')
+//         win_div.classList.remove('hide')
+//     }
+// }
+
+// function loseGame() {
+//     if (computerScore === 10) {
+//         // prompt that user lost and ask if they would like to restart the game
+//         choice_divs.classList.add('hide')
+//         lose_div.classList.remove('hide')
+//     }
+// }
 
 // function for if user loses
 function lose (userChoice, computerChoice) {
@@ -47,6 +71,11 @@ function lose (userChoice, computerChoice) {
         document.querySelector('.result').classList.remove('red-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
     }, 1000)
+    if (computerScore >= 10) {
+        // prompt that user lost and ask if they would like to restart the game
+        $('.choice').addClass("hide");
+        $(".rpsLoseDiv").removeClass("hide");
+    }
 }
 
 // function for if user ties
@@ -95,3 +124,7 @@ function main () {
 }
 
 main();
+
+winGame();
+
+loseGame();

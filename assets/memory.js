@@ -69,6 +69,18 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
+//function winGame() {
+    //if( all cards match) {
+        // prompt that user won and to click link for next game 
+    //}
+//}
+
+// function loseGame() {
+//     if (lives === 0) {
+//         // prompt that user lost and ask if they would like to restart the game from rock paper scissors
+//     }
+// }
+
 (function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
@@ -78,3 +90,6 @@ function resetBoard() {
 
 // loop through list into each one of the cards and listen for click event and execute function flipCard
 cards.forEach(card => card.addEventListener('click', flipCard))
+
+winGame();
+loseGame();
