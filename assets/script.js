@@ -45,21 +45,21 @@ function win (userChoice, computerChoice) {
     }
 }
 
-// function winGame() {
-//     if(userScore >= 10) {
-//         // prompt that user won and to click link for next game 
-//         choice_divs.classList.add('hide')
-//         win_div.classList.remove('hide')
-//     }
-// }
+function winGame() {
+    if(userScore >= 10) {
+        // prompt that user won and to click link for next game 
+        choice_divs.classList.add('hide')
+        win_div.classList.remove('hide')
+    }
+}
 
-// function loseGame() {
-//     if (computerScore === 10) {
-//         // prompt that user lost and ask if they would like to restart the game
-//         choice_divs.classList.add('hide')
-//         lose_div.classList.remove('hide')
-//     }
-// }
+function loseGame() {
+    if (computerScore === 10) {
+        // prompt that user lost and ask if they would like to restart the game
+        choice_divs.classList.add('hide')
+        lose_div.classList.remove('hide')
+    }
+}
 
 // function for if user loses
 function lose (userChoice, computerChoice) {
@@ -124,7 +124,3 @@ function main () {
 }
 
 main();
-
-winGame();
-
-loseGame();

@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.memory-card');
 const lives_span = document.querySelector('.lives');
 let lives = 5;
+let point = 0;
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -36,6 +37,7 @@ function checkForMatch () {
         if (isMatch = firstCard.dataset.framework === 
             secondCard.dataset.framework) {
                 disableCards();
+                gainPoint();
             } else {
                 unflipCards();
                 loseLife();
@@ -70,6 +72,15 @@ function loseLife() {
     }
 }
 
+function gainPoint() {
+    point++;
+    if(point >= 6) {
+        $('.memory-game').addClass("hide");
+        $('.rules').addClass("hide");
+        $(".memoryWinDiv").removeClass("hide");
+    }
+}
+
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
@@ -78,14 +89,10 @@ function resetBoard() {
 //function winGame() {
     //if( all cards match) {
         // prompt that user won and to click link for next game 
+        // choice_divs.classList.add('hide')
+        // win_div.classList.remove('hide')
     //}
 //}
-
-// function loseGame() {
-//     if (lives === 0) {
-//         // prompt that user lost and ask if they would like to restart the game from rock paper scissors
-//     }
-// }
 
 (function shuffle() {
     cards.forEach(card => {
