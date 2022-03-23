@@ -12,6 +12,9 @@ header {
     flex-direction: column;
     align-items: center;
     margin: 50px 0;
+    background-color: #FF006F;
+    padding: 10px;
+    color: white;
 }
 
 .hide {
@@ -64,4 +67,14 @@ header {
     border-radius: 10px;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
+}
+
+.rule {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-align: center;
+    width: 50%;
+    min-width: 255px;
+    margin: 2% 0;
+    border-radius: 10px;
 }

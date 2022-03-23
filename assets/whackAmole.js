@@ -7,7 +7,7 @@ let timerId = null
 const score = document.querySelector('#score');
 var mode = "go";
 
-let result = 0
+let result = 15
 let hitPosition
 let currentTime = 15
 
@@ -25,7 +25,7 @@ function randomSquare() {
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == hitPosition) {
-            result++;
+            result--;
             score.textContent = result;
             hitPosition = null;
         }
@@ -33,7 +33,7 @@ squares.forEach(square => {
 });
 
 function moveMole() {
-    timeId = setInterval(randomSquare, 500)
+    timeId = setInterval(randomSquare, 250)
 }
 
 function countDown () {
@@ -47,12 +47,11 @@ function countDown () {
             $('.text').addClass("hide");
             $(".moleLoseDiv").removeClass("hide");
             // Stops execution of action at set interval 0
-            clearInterval(timerId);
-            clearInterval(countDownTimeId);
+            clearInterval(timerInterval);
 
-        } else if (result >= 1) {
+        } else if (result <= 0) {
             // Stops execution of action at set interval 0
-            clearInterval(timerId);
+            clearInterval(timerInterval);
             $('.grid').addClass("hide");
             $('.text').addClass("hide");
             $(".moleWinDiv").removeClass("hide");
