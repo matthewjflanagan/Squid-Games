@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@621&display=swap');
+
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #217568;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
 }
 
 .hide {
@@ -7,36 +19,49 @@ body {
     visibility: hidden;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
 .grid {
     display: flex;
     flex-wrap: wrap;
     width: 276px;
     height: 276px;
+    margin-bottom: 25px;
 }
 
 .square {
+    background-color: #217568;
     height: 90px;
     width: 90px;
-    border: 1px solid black;
 }
 
 .mole {
-    background-image: url('pics/fauci.png');
+    background-color: #FF006F;
 }
 
 
 
 .pinkBtn {
-    box-shadow: 0 0 5px white;
+    box-shadow: inset;
     font-family: 'Orbitron', sans-serif;
     padding: 5px;
     background-color: #FF006F;
-    border-radius: 10px;
     font-weight:500;
     color: white;
+
+}
+
+.text {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.Endresult {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 11px;
+    color: white;
+    background-color: #FF006F;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
 }

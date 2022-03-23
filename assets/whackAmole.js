@@ -9,7 +9,7 @@ var mode = "go";
 
 let result = 0
 let hitPosition
-let currentTime = 60
+let currentTime = 15
 
 function randomSquare() {
     squares.forEach(square => {
@@ -37,24 +37,25 @@ function moveMole() {
 }
 
 function countDown () {
-    currentTime--
-    timeLeft.textContent = currentTime
 
-    if (currentTime == 0) {
-
-    }
-    var timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
         currentTime--;
         timeLeft.textContent = currentTime;
     
-        if(currentTime-- <= 0) {
+        if(currentTime <= 0) {
+            $('.grid').addClass("hide");
+            $('.text').addClass("hide");
+            $(".moleLoseDiv").removeClass("hide");
             // Stops execution of action at set interval 0
             clearInterval(timerId);
             clearInterval(countDownTimeId);
 
-        } else if (result > 60) {
+        } else if (result >= 1) {
             // Stops execution of action at set interval 0
             clearInterval(timerId);
+            $('.grid').addClass("hide");
+            $('.text').addClass("hide");
+            $(".moleWinDiv").removeClass("hide");
             // Calls function to show score and option to enter intials into Highscores 
         }
         }, 1000);

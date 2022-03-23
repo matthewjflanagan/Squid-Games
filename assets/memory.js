@@ -86,14 +86,6 @@ function resetBoard() {
     [firstCard, secondCard] = [null, null];
 }
 
-//function winGame() {
-    //if( all cards match) {
-        // prompt that user won and to click link for next game 
-        // choice_divs.classList.add('hide')
-        // win_div.classList.remove('hide')
-    //}
-//}
-
 (function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);

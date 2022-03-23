@@ -8,15 +8,14 @@
     <title>Level 3 - Whac - a - COVID Variant</title>
 </head>
 <header>
-
-</header>
-<body>
     <div class="time-remaining">
-        <span>Time: </span><span id="time-left">60</span>
+        <span class="text">Time: </span><span id="time-left" class="text">15</span>
     </div>
     <div class="score">
-        <span>Fauchi Ouchies: </span><span id="score">0</span>
+        <span class="text">Score: </span><span id="score" class="text">0</span>
     </div>
+</header>
+<body>
     <div class="grid">
         <div class="square" id="1"></div>
         <div class="square" id="2"></div>
@@ -29,24 +28,25 @@
         <div class="square" id="9"></div>
     </div>
     <button class="pinkBtn startBtn">Start</button>
-    <div class="rpsWinDiv Endresult hide">
-        <div class="rpsWinDiv hide">
-            <h1>Congratulations you have won! You may advance to Round 2</h1>
+    <div class="moleWinDiv Endresult hide">
+        <div class="moleWinDiv hide">
+            <h1>Congratulations you have won! Round 4 is under construction...</h1>
         </div>
-        <div class="rpsWinDiv hide">
-            <a class="result rpsWinDiv hide" href="memory.html" alt="link to memory game" style="font-size:30px">Memory</a>
+        <div class="moleWinDiv hide">
+            <a class="result moleWinDiv hide" href="index.html" alt="link to index" style="font-size:30px">Memory</a>
         </div>
     </div>
 
-    <div class="rpsLoseDiv Endresult hide">
-        <div class="rpsLoseDiv hide">
+    <div class="moleLoseDiv Endresult hide">
+        <div class="moleLoseDiv hide">
             <h1>You have been elimated...would you like to start over?</h1>
         </div>
-        <div class="rpsLoseDiv hide">
-        <a class="result rpsLoseDiv hide" href="index.html" alt="link to rps game" style="font-size:30px">Start Over</a>
+        <div class="moleLoseDiv hide">
+        <a class="result moleLoseDiv hide" href="index.html" alt="link to rps game" style="font-size:30px">Start Over</a>
         </div>
     </div>
     </div>
     <script src="assets/whackAmole.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
