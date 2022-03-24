@@ -1,6 +1,6 @@
 const cards = document.querySelectorAll('.memory-card');
 const lives_span = document.querySelector('.lives');
-let lives = 5;
+let lives = 7;
 let point = 0;
 
 let hasFlippedCard = false;
