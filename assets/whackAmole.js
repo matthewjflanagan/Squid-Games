@@ -33,7 +33,7 @@ squares.forEach(square => {
 });
 
 function moveMole() {
-    timeId = setInterval(randomSquare, 333)
+    timeId = setInterval(randomSquare, 500)
 }
 
 function countDown () {
