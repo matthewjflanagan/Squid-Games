@@ -38,7 +38,7 @@ function win (userChoice, computerChoice) {
         document.querySelector('.result').classList.remove('green-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
     }, 1000)
-    if(userScore >= 10) {
+    if(userScore >= 3) {
         // prompt that user won and to click link for next game 
         $('.choice').addClass("hide");
         $(".rpsWinDiv").removeClass("hide");
@@ -46,7 +46,7 @@ function win (userChoice, computerChoice) {
 }
 
 function winGame() {
-    if(userScore >= 10) {
+    if(userScore >= 3) {
         // prompt that user won and to click link for next game 
         choice_divs.classList.add('hide')
         win_div.classList.remove('hide')
@@ -54,7 +54,7 @@ function winGame() {
 }
 
 function loseGame() {
-    if (computerScore === 10) {
+    if (computerScore === 3) {
         // prompt that user lost and ask if they would like to restart the game
         choice_divs.classList.add('hide')
         lose_div.classList.remove('hide')
@@ -71,7 +71,7 @@ function lose (userChoice, computerChoice) {
         document.querySelector('.result').classList.remove('red-glow');
         result_div.innerHTML = "Make your move...loser will be eliminated";
     }, 1000)
-    if (computerScore >= 10) {
+    if (computerScore >= 3) {
         // prompt that user lost and ask if they would like to restart the game
         $('.choice').addClass("hide");
         $(".rpsLoseDiv").removeClass("hide");
