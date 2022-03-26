@@ -115,7 +115,7 @@ body {
     border: none !important;
 }
 
-.wordleWinDiv {
+.wordWinDiv {
     margin-top: 2%;
     justify-content: center;
     background: #FF006F;
@@ -124,7 +124,7 @@ body {
     max-width: 550px;
 }
 
-.wordleLoseDiv {
+.wordLoseDiv {
     justify-content: center;
     background: #FF006F;
     color: white;

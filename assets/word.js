@@ -2,7 +2,7 @@ const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
 const messageDisplay = document.querySelector('.message-container')
 
-const wordle = "PRANK"
+const word = "PRANK"
 const keys = [
     'A',
     'B',
@@ -108,15 +108,15 @@ const checkRow = () => {
 
     if (currentTile > 4) {
         flipTile()
-        if(wordle == guess) {
+        if(word == guess) {
             isGameOver = true
             $('.game-container').addClass("hide");
-            $(".wordleWinDiv").removeClass("hide");
+            $(".wordWinDiv").removeClass("hide");
         } else {
             if(currentRow >= 5) {
                 isGameOver = true
                 $('.game-container').addClass("hide");
-                $(".wordleLoseDiv").removeClass("hide");
+                $(".wordLoseDiv").removeClass("hide");
             }
             if(currentRow < 5) {
                 currentRow++
@@ -135,7 +135,7 @@ const addColorToKey = (keyLetter, color) => {
 
 const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
-    let checkWordle = wordle
+    let checkWord = word
     const guess = []
 
     rowTiles.forEach(tile => {
@@ -143,16 +143,16 @@ const flipTile = () => {
     })
 
     guess.forEach((guess, index) => {
-        if (guess.letter == wordle[index]) {
+        if (guess.letter == word[index]) {
             guess.color = 'green-overlay'
-            checkWordle = checkWordle.replace(guess.letter, '')
+            checkWord = checkWord.replace(guess.letter, '')
         }
     })
 
     guess.forEach(guess => {
-        if (checkWordle.includes(guess.letter)) {
+        if (checkWord.includes(guess.letter)) {
             guess.color = 'yellow-overlay'
-            checkWordle = checkWordle.replace(guess.letter, '')
+            checkWord = checkWord.replace(guess.letter, '')
         }
     })
 
