@@ -1,8 +1,8 @@
 const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
-const messageDisplay = document.querySelector('message-container')
+const messageDisplay = document.querySelector('.message-container')
 
-const wordle = "wordle"
+const wordle = "PRANK"
 const keys = [
     'A',
     'B',
@@ -67,17 +67,19 @@ keys.forEach(key => {
     keyboard.append(buttonElement)
 })
 
-const handleClick = (key) => {
-    console.log('clicked', key)
-    if(key === '<<') {
+const handleClick = (letter) => {
+    console.log('clicked', letter)
+    if(letter === '<<') {
         deleteLetter()
         console.log('guessRows', guessRows)
+        return
     }
-    if(key === 'ENTER') {
+    if(letter === 'ENTER') {
         checkRow()
         console.log('guessRows', guessRows)
+        return
     }
-    addLetter(key)
+    addLetter(letter)
 }
 
 const addLetter = (letter) => {
@@ -91,26 +93,30 @@ const addLetter = (letter) => {
 }
 
 const deleteLetter = () => {
-    currentTile--
-    const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
-    tile.textContent = ''
-    guessRows[currentRow][currentTile] = ''
-    tile.setAttribute('data', letter)
+        if (currentTile > 0){
+        currentTile--
+        const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
+        tile.textContent = ''
+        guessRows[currentRow][currentTile] = ''
+        tile.setAttribute('data', '')
+    }
 }
 
 const checkRow = () => {
+
     const guess = guessRows[currentRow].join('')
 
     if (currentTile > 4) {
+        flipTile()
         if(wordle == guess) {
-            showMessage('great!')
             isGameOver = true
-            return
+            $('.game-container').addClass("hide");
+            $(".wordleWinDiv").removeClass("hide");
         } else {
             if(currentRow >= 5) {
-                isGameOver = false
-                return
-                showMessage('game over')
+                isGameOver = true
+                $('.game-container').addClass("hide");
+                $(".wordleLoseDiv").removeClass("hide");
             }
             if(currentRow < 5) {
                 currentRow++
@@ -121,9 +127,40 @@ const checkRow = () => {
     }
 }
 
-const showMessage = (message) => {
-    const messageElement = document.createElement('p')
-    messageElement.textContent = message
-    messageDisplay.append(messageElement)
-    setTimeout(() => messageDisplay.removeChild(messageElement), 2000)
+const addColorToKey = (keyLetter, color) => {
+    const key = document.getElementById(keyLetter)
+
+    key.classList.add(color)
+}
+
+const flipTile = () => {
+    const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes
+    let checkWordle = wordle
+    const guess = []
+
+    rowTiles.forEach(tile => {
+        guess.push({ letter: tile.getAttribute('data'), color: 'grey-overlay'})
+    })
+
+    guess.forEach((guess, index) => {
+        if (guess.letter == wordle[index]) {
+            guess.color = 'green-overlay'
+            checkWordle = checkWordle.replace(guess.letter, '')
+        }
+    })
+
+    guess.forEach(guess => {
+        if (checkWordle.includes(guess.letter)) {
+            guess.color = 'yellow-overlay'
+            checkWordle = checkWordle.replace(guess.letter, '')
+        }
+    })
+
+    rowTiles.forEach((tile, index) => {
+        setTimeout(() => {
+            tile.classList.add('flip')
+            tile.classList.add(guess[index].color)
+            addColorToKey(guess[index].letter, guess[index].color)
+        }, 500 * index)
+    })
 }
