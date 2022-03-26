@@ -23,7 +23,6 @@ const keys = [
     'Q',
     'R',
     'S',
-    'ENTER',
     'T',
     'U',
     'V',
@@ -31,6 +30,7 @@ const keys = [
     'X',
     'Y',
     'Z',
+    'ENTER',
     '<<',
 ]
 
