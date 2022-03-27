@@ -10,5 +10,6 @@
 }
 
 body {
-    background-color: #217568;
+    margin:0;
+    overflow: hidden;
 }
