@@ -78,3 +78,33 @@ header {
     margin: 2% 0;
     border-radius: 10px;
 }
+
+.moleWinDiv {
+    margin-top: 2%;
+    justify-content: center;
+    background: #FF006F;
+    color: white;
+    width: 80%;
+    max-width: 550px;
+}
+
+.moleLoseDiv {
+    justify-content: center;
+    background: #FF006F;
+    color: white;
+    width: 80%;
+    max-width: 550px;
+}
+
+.result {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: white;
+    background-color: #FF006F;
+    width: fit-content;
+    padding: 1% 2%;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}

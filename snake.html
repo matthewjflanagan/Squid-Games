@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="assets/snake.css" />
+</head>
+<body>
+    <h1>Snake</h1>
+    <div class="snakeWinDiv Endresult hide">
+        <div class="snakeWinDiv hide">
+            <h1>That's all the games for now, would you like to play again?</h1>
+        </div>
+        <div class="snakeWinDiv hide">
+            <a class="result snakeWinDiv hide" href="index.html" alt="link to word" style="font-size:30px">Round 4</a>
+        </div>
+    </div>
+
+    <div class="snakeLoseDiv Endresult hide">
+        <div class="snakeLoseDiv hide">
+            <h1>You have been elimated...would you like to play again?</h1>
+        </div>
+        <div class="snakeLoseDiv hide">
+        <a class="result snakeLoseDiv hide" href="index.html" alt="link to rps game" style="font-size:30px">Play Again</a>
+        </div>
+    </div>
+    <canvas id="game" width=400 height=400 />
+    <script src="assets/snake.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
