@@ -154,15 +154,6 @@ function checkAppleCollision() {
 
 document.body.addEventListener('keydown', keyDown);
 
-//SWIPE USAGE:
-/*
-var el = document.getElementById('someel')
-swipedetect(el, function(swipedir){
-    swipedir contains either "none", "left", "right", "top", or "down"
-    if (swipedir =='left')
-        alert('You just swiped left!')
-})
-*/
 
 function swipedetect(el, callback){
   
@@ -172,12 +163,12 @@ function swipedetect(el, callback){
     startY,
     distX,
     distY,
-    threshold = 150, //required min distance traveled to be considered swipe
+    threshold = 50, //required min distance traveled to be considered swipe
     restraint = 100, // maximum distance allowed at the same time in perpendicular direction
     allowedTime = 300, // maximum time allowed to travel that distance
     elapsedTime,
     startTime,
-    handleswipe = callback || function(swipedir){}
+    handleswipe = callback || function(_swipedir){}
   
     touchsurface.addEventListener('touchstart', function(e){
         var touchobj = e.changedTouches[0]
@@ -210,6 +201,16 @@ function swipedetect(el, callback){
         e.preventDefault()
     }, false)
 }
+
+//SWIPE USAGE:
+
+// var el = document.getElementById('someel')
+// swipedetect(el, function(swipedir){
+//     // swipedir contains either "none", "left", "right", "top", or "down"
+//     if (swipedir =='left')
+//         alert('You just swiped left!')
+// })
+
 
 function keyDown(event, swipedir) {
     //up
