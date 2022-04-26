@@ -54,3 +54,26 @@ canvas {
     font-family: 'Orbitron', sans-serif;
     text-align: center;
 }
+
+h1 {
+    margin-bottom: 0;
+}
+
+.directionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sideContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.arrowBtn {
+    width: 80px;
+    height: 80px;
+    background-color: #FF006F;
+    color: #FF006F;
+}
