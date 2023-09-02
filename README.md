@@ -2,7 +2,7 @@
 
 ## Description
 Make it thorugh all 6 games to win the prize money! 
-- Currently 1 of 6 games completed
+- Currently 4 of 6 games completed
 
 ## Table of Contents (Optional)
 - [Installation](#installation)
